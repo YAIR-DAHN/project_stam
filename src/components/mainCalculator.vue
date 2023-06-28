@@ -98,14 +98,16 @@
 
         <!-- הזנת ימי עבודה בשבוע -->
         <h3>ימי עבודה בשבוע</h3>
-        <input
+        <!-- <input
           type="checkbox"
           id="workDay1"
           name="workDays"
           value="sunday"
           v-model="userData.workDays"
         />
-        <label for="workDay1">יום ראשון</label>
+        <label for="workDay1">יום ראשון</label> -->
+        <v-switch v-model="userData.workDays" color="primary" label="יום ראשון" value="sunday" hide-details></v-switch>
+
         <input
           type="checkbox"
           id="workDay2"

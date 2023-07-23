@@ -20,59 +20,17 @@
 
         <!-- אזור בחירת סוג ספר -->
         <div id="selctBook">
-          <input
-            type="radio"
-            id="SeferTorah"
-            name="item1"
-            value="SeferTorah"
-            v-model="userData.book"
-            required
-          />
+          <input type="radio" id="SeferTorah" name="item1" value="SeferTorah" v-model="userData.book" required />
           <label for="SeferTorah">ספר תורה</label>
-          <input
-            type="radio"
-            id="Tfilin"
-            name="item1"
-            value="Tfilin"
-            v-model="userData.book"
-            required
-          />
+          <input type="radio" id="Tfilin" name="item1" value="Tfilin" v-model="userData.book" required />
           <label for="Tfilin">תפילין</label>
-          <input
-            type="radio"
-            id="Mezuzot"
-            name="item1"
-            value="Mezuzot"
-            v-model="userData.book"
-            required
-          />
+          <input type="radio" id="Mezuzot" name="item1" value="Mezuzot" v-model="userData.book" required />
           <label for="Mezuzot">מזוזות</label>
-          <input
-            type="radio"
-            id="MegilatEster"
-            name="item1"
-            value="MegilatEster"
-            v-model="userData.book"
-            required
-          />
+          <input type="radio" id="MegilatEster" name="item1" value="MegilatEster" v-model="userData.book" required />
           <label for="MegilatEster">מגילת אסתר</label>
-          <input
-            type="radio"
-            id="SeferHaftarot"
-            name="item1"
-            value="SeferHaftarot"
-            v-model="userData.book"
-            required
-          />
+          <input type="radio" id="SeferHaftarot" name="item1" value="SeferHaftarot" v-model="userData.book" required />
           <label for="SeferHaftarot">ספר הפטרות</label>
-          <input
-            type="radio"
-            id="Other"
-            name="item1"
-            value="Other"
-            v-model="userData.book"
-            required
-          />
+          <input type="radio" id="Other" name="item1" value="Other" v-model="userData.book" required />
           <label for="Other">אחר</label>
 
           <hr />
@@ -89,72 +47,26 @@
         <label for="pages"> מספר עמודים (לספר 1) </label>
         <input type="number" id="pages" v-model="userData.info.pagesSelct" />
         <label for="workHours">שעות עבודה ליום </label>
-        <input
-          type="number"
-          id="workHours"
-          v-model="userData.info.workHoursSelct"
-        />
+        <input type="number" id="workHours" v-model="userData.info.workHoursSelct" />
         <hr />
 
         <!-- הזנת ימי עבודה בשבוע -->
         <h3>ימי עבודה בשבוע</h3>
-        <!-- <input
-          type="checkbox"
-          id="workDay1"
-          name="workDays"
-          value="sunday"
-          v-model="userData.workDays"
-        />
-        <label for="workDay1">יום ראשון</label> -->
-        <v-switch v-model="userData.workDays" color="primary" label="יום ראשון" value="sunday" hide-details></v-switch>
+        <input type="checkbox" id="workDay1" name="workDays" value="sunday" v-model="userData.workDays" />
+        <label for="workDay1">יום ראשון</label>
+        <!-- <v-switch v-model="userData.workDays" color="primary" label="יום ראשון" value="sunday" hide-details></v-switch> -->
 
-        <input
-          type="checkbox"
-          id="workDay2"
-          name="workDays"
-          value="monday"
-          v-model="userData.workDays"
-        />
+        <input type="checkbox" id="workDay2" name="workDays" value="monday" v-model="userData.workDays" />
         <label for="workDay2">יום שני</label>
-        <input
-          type="checkbox"
-          id="workDay3"
-          name="workDays"
-          value="tuesday"
-          v-model="userData.workDays"
-        />
+        <input type="checkbox" id="workDay3" name="workDays" value="tuesday" v-model="userData.workDays" />
         <label for="workDay3">יום שלישי</label>
-        <input
-          type="checkbox"
-          id="workDay4"
-          name="workDays"
-          value="wednesday"
-          v-model="userData.workDays"
-        />
+        <input type="checkbox" id="workDay4" name="workDays" value="wednesday" v-model="userData.workDays" />
         <label for="workDay4">יום רביעי</label>
-        <input
-          type="checkbox"
-          id="workDay5"
-          name="workDays"
-          value="thursday"
-          v-model="userData.workDays"
-        />
+        <input type="checkbox" id="workDay5" name="workDays" value="thursday" v-model="userData.workDays" />
         <label for="workDay5">יום חמישי</label>
-        <input
-          type="checkbox"
-          id="workDay6"
-          name="workDays"
-          value="friday"
-          v-model="userData.workDays"
-        />
+        <input type="checkbox" id="workDay6" name="workDays" value="friday" v-model="userData.workDays" />
         <label for="workDay6">יום שישי</label>
-        <input
-          type="checkbox"
-          id="workDay7"
-          name="workDays"
-          value="saturday"
-          v-model="userData.workDays"
-        />
+        <input type="checkbox" id="workDay7" name="workDays" value="saturday" v-model="userData.workDays" />
         <label for="workDay7">מוצאי שבת</label>
       </fieldset>
     </form>
@@ -165,9 +77,9 @@
   <div v-show="showScreen3">
     <h1>התוצאה היא</h1>
     <h3>נתרו לך {{ calculatData.timeLeft }} ימי עבודה</h3>
-    <h3>אתה צריך לכתוב {{ calculatData.pagePerDay }} דפים ליום</h3>
-    <h3>הרווח המשוער הוא  {{ calculatData.profitPerDay }} שקלים ליום</h3>
-    <h3>אתה צריך לכתוב {{ calculatData.writePagePerHour }} דפים לשעה</h3>
+    <h3>אתה צריך לכתוב {{ calculatData.pagePerDay.toFixed(1) }} דפים ליום</h3>
+    <h3>הרווח המשוער הוא {{ calculatData.profitPerDay.toFixed(1) }} שקלים ליום</h3>
+    <h3>אתה צריך לכתוב {{ calculatData.writePagePerHour.toFixed(1) }} דפים לשעה</h3>
     <button @click="startCalculator">חישוב חדש</button>
   </div>
 </template>
@@ -223,9 +135,36 @@ export default {
 
     //חישוב ימי עבודה
     dayCalc() {
+      //הגדרת תאריך התחלה וסיום
       const dateUser = new Date(this.saveData[0].info.dateSelct);
       const today = new Date();
       let workDaysLeft = 0;
+      let calDataUser = new Date(Number(dateUser)).toLocaleDateString('en-GB')
+      let calNowDataStr = new Date(Number(today)).toLocaleDateString('en-GB')
+      
+
+      //המרת תאריך לפורמט מתאים 
+      let nowDataStr = "";
+      let nowUserDataStr = "";
+      nowDataStr = `${calNowDataStr[6]}${calNowDataStr[7]}${calNowDataStr[8]}${calNowDataStr[9]}-${calNowDataStr[3]}${calNowDataStr[4]}-${calNowDataStr[0]}${calNowDataStr[1]}`;
+      nowUserDataStr = `${calDataUser[6]}${calDataUser[7]}${calDataUser[8]}${calDataUser[9]}-${calDataUser[3]}${calDataUser[4]}-${calDataUser[0]}${calDataUser[1]}`;
+    
+
+
+      // חישוב תאריכים  עבריים
+    
+  function JewishCal() {
+        fetch(
+          `https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&mod=on&nx=on&ss=on&mf=on&c=on&M=on&s=on&lg=he&start=${nowDataStr}&end=${nowUserDataStr}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          });
+      }
+       JewishCal()
+
+      //תנאי לחישוב ימי עבודה
       while (today <= dateUser) {
         if (
           this.userData.workDays.includes(
@@ -237,7 +176,6 @@ export default {
         today.setDate(today.getDate() + 1); //נצרך כיוון שמחשב הימים מ0
       }
       this.calculatData.timeLeft = workDaysLeft;
-      console.log(this.userData.workDays);
     },
 
     //חישוב כמות הדפים ליום עבודה
@@ -250,7 +188,7 @@ export default {
     //חישוב רווח משוער ליום עבודה
     profitPerDay() {
       let profit =
-        this.userData.info.profitSelct  /
+        this.userData.info.profitSelct /
         this.calculatData.timeLeft;
       this.calculatData.profitPerDay = profit;
     },
